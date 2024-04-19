@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frontend.activity.FileSelectorActivity">
+
+    <LinearLayout
+        android:id="@+id/llh_btn"
+        android:layout_width="0dp"
+        android:layout_height="80sp"
+        android:background="?attr/colorSecondary"
+        android:clipToPadding="true"
+        android:dividerPadding="5sp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_load_file"
+            android:layout_width="60sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="?attr/colorTertiary"
+            android:backgroundTintMode="src_in"
+            android:gravity="center_horizontal"
+            android:src="@drawable/ic_context_open"
+            android:text="Load File"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorTertiaryFixedDim"
+            android:textStyle="bold"
+            app:shapeAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <ImageButton
+            android:id="@+id/btn_remove"
+            android:layout_width="60sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="?attr/colorTertiary"
+            android:backgroundTintMode="src_in"
+            android:gravity="center_horizontal"
+            android:src="@drawable/ic_context_remove"
+            android:text="Remove File"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorTertiaryFixedDim"
+            android:textStyle="bold"
+            app:shapeAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <ImageButton
+            android:id="@+id/btn_process"
+            android:layout_width="60sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="?attr/colorTertiary"
+            android:backgroundTintMode="src_in"
+            android:gravity="center_horizontal"
+            android:src="@drawable/baseline_input_24"
+            android:text="Remove File"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorTertiaryFixedDim"
+            android:textStyle="bold"
+            app:shapeAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/colorActivatedHighlight"
+            android:backgroundTint="?android:attr/colorEdgeEffect"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_test_lorem"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:background="#C61919"
+                android:backgroundTint="#EA0A0A"
+                android:outlineProvider="bounds"
+                android:text="test scroll"
+                android:textColor="#DA4040"
+                android:textSize="8sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="int" />
+
+                <EditText
+                    android:id="@+id/edt_lorem_count"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:inputType="number|numberDecimal"
+                    android:text="100" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llv_display_stat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llh_btn">
+
+        <TextView
+            android:id="@+id/lb_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lb_status_loaded_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File Loaded = " />
+
+            <TextView
+                android:id="@+id/display_file_loaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="Info" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lb_file_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:includeFontPadding="true"
+            android:paddingTop="25sp"
+            android:text="Text Content" />
+
+        <ScrollView
+            android:id="@+id/ScrollContent"
+            style="@android:style/Widget.Holo.ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="?android:attr/colorSecondary"
+            android:clipToPadding="true"
+            android:fillViewport="true"
+            android:paddingTop="5sp"
+            android:scrollbarSize="8dp"
+            android:transitionGroup="false">
+
+            <TextView
+                android:id="@+id/display_text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorSecondary"
+                android:text="TextView"
+                android:textSize="12sp" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

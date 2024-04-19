@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AFBQuickstartMenu" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/bg_dark</item>
+        <item name="colorPrimaryVariant">@color/menu_dark</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="colorSecondary">#2B3B53</item>
+        <item name="colorSecondaryVariant">@color/bg_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!--   custom     -->
+        <item name="android:statusBarColor" >@color/menu_dark</item>
+        <item name="android:textColor" >@color/txt_dark</item>
+        <item name="android:background" >@color/bg_dark</item>
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="android:colorPrimary" >@color/menu_dark</item>
+    </style>
+</resources>
